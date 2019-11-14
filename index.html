@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <html>
+<head>
+<style>
+    
+    *{
+    margin:0;padding:0
+     }
+     .navbar{
+         width: 100%;
+         height: 55px;
+         top: 0;
+         position:fixed;
+         background-color: #fff;
+         border-bottom: 1px solid #f0f0f0;
+         margin-bottom: 20px;
+
+     }
+     .width-limit{
+         max-width: 1440px;
+         min-width: 768px;
+         height: 100%;
+         margin: 0 auto;
+     }
+     
+     .logo img{
+         float: left;
+         height: 100%;
+     }
+     .container{
+         margin-left: auto;
+         margin-right: auto;
+         padding-left: 15px;
+         padding-right: 15px;
+         width: 930px;
+         height: 100%;
+     }
+     .container-collapse{
+        height: 100%;
+        width: 945px;
+        margin-left: -15px;
+     }
+     .container-collapse-nav{
+         float: left;
+         margin: 0;
+         height: 100%;
+     }
+     .container-collapse-nav div{
+         margin-right: 10px;
+         float: left;
+         position: relative;
+         display: block;
+         line-height: 20px;
+         height: 100%;
+     }
+
+     .container-collapse-nav-tab a{
+         color: #ea6f5a;
+
+         line-height: 20px;
+         padding: 15px;
+         position: relative;
+         display: block;
+         text-decoration:none; 
+     }
+     .container-collapse-nav-tab a img{
+       margin-right: 5px;
+        display: inherit;
+        float: left;
+        height: 20px;
+        
+     }
+    .body{
+       height: 900px;
+       background-color: bisque;
+    }
+   
+</style>
+</head>
+<body>
+     <!-- 全局顶部导航栏 -->
+     <nav class="navbar">
+         <div class="width-limit">
+            <!-- 左上角 -->
+            <a class="logo" href="index.html">
+               <img src="https://cdn2.jianshu.io/assets/web/nav-logo-4c7bbafe27adc892f3046e6978459bac.png" alt="nav-bar">
+            </a>
+            <!-- 中间 -->
+            <div class="container">
+                <div class="container-collapse">
+                    <div class="container-collapse-nav">
+                        <div class="container-collapse-nav-tab">
+                            <a href="index.html">                               
+                                <span class="menu-text">首页</span>
+                                <img src="./zhinanzhen.png" class="menu-icon" alt="zhinanzhen">
+                            </a>
+                        </div>
+                        <div class="container-collapse-nav-tab"></div>
+                        <div class="container-collapse-nav-search"></div>
+                     </div>
+                </div>
+                     
+            </div>
+        </div>
+     </nav>
+     <!-- 中间部分 -->
+     <div class="container body">1</div>
+</body>
+<script>
+
+
+
+</script>
+</html>
+</body>
+</html>
