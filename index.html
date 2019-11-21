@@ -4,226 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <style src="http://at.alicdn.com/t/font_1512202_8w0hz7jz9t8.css" />
+    <link rel="stylesheet" href="style-a.css" type="text/css" media="screen and (min-width: 1200px)">
+    <link rel="stylesheet" href="style-b.css" type="text/css" media="screen and (min-width: 992px) and (max-width: 1200px)">
+    <link rel="stylesheet" href="style-c.css" type="text/css" media="screen and (min-width: 800px) and (max-width: 992px)">
+    <link rel="stylesheet" href="style-d.css" type="text/css" media="screen and (max-width: 800px)">
     <title>Document</title>
-</head>
-<body>
-    <html>
-<head>
-<style>
-    
-     *{
-    margin:0;
-    padding:0；
-    
-     }
-     @font-face {
-    font-family: 'iconfont';  /* project id 1512202 */
-    src: url('http://at.alicdn.com/t/font_1512202_8w0hz7jz9t8.eot');
-    src: url('http://at.alicdn.com/t/font_1512202_8w0hz7jz9t8.eot?#iefix') format('embedded-opentype'),
-    url('http://at.alicdn.com/t/font_1512202_8w0hz7jz9t8.woff2') format('woff2'),
-    url('http://at.alicdn.com/t/font_1512202_8w0hz7jz9t8.woff') format('woff'),
-    url('http://at.alicdn.com/t/font_1512202_8w0hz7jz9t8.ttf') format('truetype'),
-    url('http://at.alicdn.com/t/font_1512202_8w0hz7jz9t8.svg#iconfont') format('svg');
-    }    
-    .iconfont {
-    font-family: iconfont!important;
-    font-size: inherit;
-    font-style: normal;
-    font-weight: 400!important;
-    -webkit-font-smoothing: antialiased;
-    }
-     .navbar{
-         width: 100%;
-         height: 55px;
-         top: 0;
-         position:fixed;
-         background-color: #fff;
-         border-bottom: 1px solid #f0f0f0;
-         margin-bottom: 20px;
-         font-family: Microsoft YaHei;
-     }
-     .width-limit{
-         max-width: 1440px;
-         min-width: 768px;
-         height: 100%;
-         margin: 0 auto;
-         display: block;
-     }
-     
-     .logo img{
-         float: left;
-         height: 100%;
-     }
-     .container{
-         margin-left: auto;
-         margin-right: auto;
-         padding-left: 15px;
-         padding-right: 15px;
-         width: 930px;
-         height: 100%;
-     }
-     .container-collapse{
-        height: 100%;
-        width: 945px;
-        margin-left: -15px;
-     }
-     .container-collapse-nav{
-         float: left;
-         margin: 0;
-         height: 100%;
-     }
-     .container-collapse-nav div{
-         margin-right: 10px;
-         float: left;
-         position: relative;
-         display: block;
-         line-height: 20px;
-         height: 100%;
-     }
-
-     .container-collapse-nav-tab a{
-         color: #ea6f5a;
-         height: 25px;
-         line-height: 20px;
-         padding: 15px;
-         position: relative;
-         display: block;
-         text-decoration:none; 
-     }
-     .container-collapse-nav-tab a img{
-        margin-right: 5px;
-        display: inherit;
-        float: left;
-        height: 21px;
-     }
-     .container-collapse-nav-search{
-        padding-left: 15px;
-     }
-     .container-collapse-nav-search-limit{
-        position: relative;
-        top: 9px;
-     }
-     .container-collapse-nav-search-limit input{
-        width: 240px;
-        padding: 0 40px 0 20px;
-        height: 38px;
-        font-size: 14px;
-        border: 1px solid #eee;
-        border-radius: 40px;
-        background: #eee;
-        transition: width .5s linear;
-        transition-delay: .1s;
-     }
-     .container-collapse-nav-search-limit input:focus {
-        width: 300px;
-        
-     }
-    
-     .container-collapse-nav-search-limit a{
-        position: absolute;
-        top: 4px;
-        right: 5px;
-        width: 30px;
-        height: 30px!important;
-        line-height: normal!important;
-        padding: 0!important;
-        color: #969696!important;
-        text-align: center;
-     }
-     .container-collapse-nav-search-limit a .iconfont{
-        margin: 5px -1px 0 0;
-        display: block;
-        height: 20px;
-     }
-     
-     .menu-text-download{
-        color: #333333;
-    }
-    .download a:hover{
-        background-color: #f5f5f5;
-    }
-    
-    .btn{
-        display: inline-block;
-        margin-bottom: 0;
-        font-weight: 400px;
-        text-align: center;
-        vertical-align: middle;
-        padding: 6px 12px;    
-        border: 1px solid transparent;
-        font-family: Microsoft YaHei;
-        text-decoration:none; 
-        
-    }
-    nav .btn-write{
-        float: right;
-        width: 74px;
-        height: 26px;
-        line-height: 24px;
-        margin: 8px 12px 0;
-        border-radius: 20px;
-        font-size: 15px;
-        color: #fff;
-        background-color: #ea6f5a;
-    }
-    nav .sign-up{
-        float: right;
-        width: 54px;
-        height: 24px;
-        line-height: 24px;
-        margin: 9px 5px 0 15px;
-        border: 1px solid rgba(236,97,73,.7);
-        border-radius: 20px;
-        font-size: 15px;
-        color: #ea6f5a;
-        background-color: transparent;
-    }
-    nav .sign-up:hover{
-        background-color:#fef7f6
-    }
-    nav .log-in{
-        float: right;
-        margin: 11px 6px 0 10px;
-        height: 30px;
-        font-size: 15px;
-        color: #969696;
-    }
-    .nav-beta{
-        float: right;
-        height: 25px;
-        padding: 15px 0px;
-        margin: 0 12px;
-    }
-    .nav-beta-limit{
-        width: 100%;
-        height: 100%;
-    }
-    .nav-beta-limit-image{
-        height: 25px;
-    }
-    .style-mode-btn{
-        float: right;
-        line-height: 20px;
-        padding: 17px 10px;
-        font-size: 24px;
-        color: #969696;
-    }
-    .style-mode-btn-image{
-        height: 24px;
-    }
-    .btn-write img{
-        height: 20px;
-        margin-right: 3px;
-        font-size: 19px;
-        vertical-align: middle;
-    }
-    .body{
-       height: 900px;
-       background-color: bisque;
-       font-family: Microsoft YaHei;
-    }
-</style>
 </head>
 <body>
      <!-- 全局顶部导航栏 -->
@@ -252,6 +37,13 @@
             </div>
             <!-- 中间 -->
             <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu" aria-expanded="true">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
                 <div class="container-collapse">
                     <div class="container-collapse-nav">
                         <div class="container-collapse-nav-tab">
@@ -270,10 +62,9 @@
                             <div class="container-collapse-nav-search-limit">
                                 <input type="search" name="search" placeholder="搜索" class="search">
                                 <a class="search-btn" href="">
-                                    <i class="iconfont logo">&#xe617;</i> 
-                                </a>
-                                
-                                
+                                    <img src="search1.png"  alt="search">
+                                    
+                                </a>                                
                             </div>
                         </div>
                      </div>
@@ -284,10 +75,8 @@
      </nav>
      <!-- 中间部分 -->
      <div class="container body">1</div>
-</body>
+
 <script>
-
-
 
 </script>
 </html>
