@@ -1,21 +1,21 @@
-
+var open = false
+// 屏幕宽度小于800px，菜单隐藏动画
 var btn = document.getElementById("btn-click");
 var nav = document.getElementById("nav-collapse");
-
-for(let a=1;a<10;a++){
-    if(a%2!=0) {
-        btn.addEventListener('click',function(){
+btn.addEventListener('click', function(){
+    open = !open
+    if (open) {
         nav.style.display = "block";
         btn.style.backgroundColor = "rgba(221, 221, 221, 0.9)";
-        
-    })
-    } else{
-        document.getElementById("btn-click").addEventListener('click',function(){
-            nav.style.display = "none";})
+        nav.style.transition = "0.5s";
+        nav.style.height = "172px";
+    } else {
+        nav.style.display = "none";
+        nav.style.transition = "0.5s";
+        nav.style.height = "0";
     }
+})
 
-    }
-      
     
     
     
