@@ -70,10 +70,10 @@
          .container-collapse-nav div{
              /* margin-right: 10px; */
              float: left;
-             position: relative;
+             /* position: relative; */
              display: block;
              line-height: 20px;
-             height: 100%;
+             /* height: 100%; */
          }
     
          .container-collapse-nav-tab a{
@@ -94,29 +94,11 @@
          .container-collapse-nav-tab a span{
              display: none;
          }
-         /* @media (max-width: 1200px) and (min-width: 992px){
-             body{
-                 background: coral;
-             }
-    
-             .container-collapse-nav-tab a img{
-              display: none;  
-         } */
-         /* @media screen and (max-width: 992px) and (min-width: 756px){
-             body{
-                 background: yellowgreen;
-             }
-    
-             .container-collapse-nav-tab a span{
-              display: none;  
-         }
-         } */
-         /* .container-collapse-nav-search{
-            padding-left: 15px;
-         } */
+         
          .container-collapse-nav-search-limit{
             position: relative;
             top: 9px;
+            height: 35px;
          }
          .container-collapse-nav-search-limit input{
             width: 150px;
@@ -134,8 +116,7 @@
             width: 300px;
             
          } */
-        
-         .container-collapse-nav-search-limit a{
+         .container-collapse-nav-search-limit-img{
             position: absolute;
             top: 4px;
             right: 5px;
@@ -145,13 +126,79 @@
             padding: 0!important;
             color: #969696!important;
             text-align: center;
+            margin-right: 0 !important;
+            border-radius: 50%;
+            background-color:transparent;
+            /* float: right; */
          }
+         
          .container-collapse-nav-search-limit a img{
-            margin: 4px -2px 4px 0px;
+            margin: 4px 0px 4px 0px;
             /* display: block; */
             height: 21px;           
          }
-         
+         #navbar-search-tips{
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 0 8px rgba(0,0,0,.2);
+            margin-top: 12px;
+            width: 250px;
+            left: 0;
+            top: 100%;
+            /* visibility: hidden; */
+            /* opacity: 0; */
+            border-radius: 4px;
+         }
+         .trangle{
+            position:absolute;
+            width:0;
+            height:0;
+            border:12px solid transparent;
+            border-bottom-color:white;  
+            top:-24px;
+            left:8%;
+        }
+         #navbar-search-tips .search-recent {
+            padding: 5px;
+        }
+        #navbar-search-tips .search-recent ul {
+            list-style-type: none;
+            margin: 0;
+            padding-left: 0;
+        }
+        #navbar-search-tips .search-recent ul li {
+            margin-right: 0;
+        }
+        .search-recent .search-recent-item-wrap li a {
+            display: block;
+            height: 40px;
+            line-height: 20px;
+            padding: 10px 15px;
+            font-size: 14px;
+            color: #333;
+            position: relative;
+        }
+        .search-recent .search-recent-item-wrap li a .ic-search-history {
+            float: left;
+            margin-right: 10px;
+            font-size: 18px;
+            color: #787878;
+        }
+        .search-recent .search-recent-item-wrap li a span {
+            /* vertical-align: middle; */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: block;
+            padding-right: 30px;
+        }
+        .search-recent .search-recent-item-wrap li a .ic-unfollow {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            color: #a0a0a0;
+            /* display: none; */
+        }
          .menu-text-download{
             color: #333333;
         }

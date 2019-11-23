@@ -1,5 +1,5 @@
-var open = false
 // 屏幕宽度小于800px，菜单隐藏动画
+var open = false
 var btn = document.getElementById("btn-click");
 var nav = document.getElementById("nav-collapse");
 btn.addEventListener('click', function(){
@@ -18,7 +18,22 @@ btn.addEventListener('click', function(){
     }
 })
 
-    
+//点击搜索框后，图标动画
+var searchOne = document.getElementById("search-input");
+var searchImg = document.getElementById("search-img");
+var searchTwo = document.getElementById("search-img-a")
+searchOne.addEventListener('focus',function(){
+    searchImg.style.backgroundColor = "grey";
+    searchTwo.src = "fangdajing.png"
+
+})
+searchOne.addEventListener('blur',function(){
+    searchImg.style.backgroundColor = "transparent";
+    searchTwo.src = "search1.png"
+})
+
+
+
     
     
 
