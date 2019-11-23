@@ -31,7 +31,13 @@ searchOne.addEventListener('blur',function(){
     searchImg.style.backgroundColor = "transparent";
     searchTwo.src = "search1.png"
 })
+// var e = window.event
+searchOne.addEventListener('keypress',function(event){
+    if(this.value!='' && event.keyCode == 13){
+        window.location = "result.html"
+    } 
 
+})
 
 
     
