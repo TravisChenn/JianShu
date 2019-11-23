@@ -5,12 +5,14 @@ var nav = document.getElementById("nav-collapse");
 btn.addEventListener('click', function(){
     open = !open
     if (open) {
-        nav.style.display = "block";
+        // nav.style.display = "block";
+        nav.style.visibility = "visible";
         btn.style.backgroundColor = "rgba(221, 221, 221, 0.9)";
         nav.style.transition = "0.5s";
         nav.style.height = "172px";
     } else {
-        nav.style.display = "none";
+        nav.style.visibility = "hidden";
+        // nav.style.display = "none";
         nav.style.transition = "0.5s";
         nav.style.height = "0";
     }

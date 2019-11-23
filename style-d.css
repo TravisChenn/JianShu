@@ -111,7 +111,8 @@
 }
          
          .container-collapse-nav{
-             display: none;
+             /* display: none; */
+             visibility: hidden;
             background: #fff;
             margin: 0 -15px;
             height: 0;
