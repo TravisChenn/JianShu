@@ -1,13 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style-a.css" type="text/css" media="screen and (min-width: 1200px)">
-    <link rel="stylesheet" href="style-b.css" type="text/css" media="screen and (min-width: 992px) and (max-width: 1200px)">
-    <link rel="stylesheet" href="style-c.css" type="text/css" media="screen and (min-width: 800px) and (max-width: 992px)">
-    <link rel="stylesheet" href="style-d.css" type="text/css" media="screen and (max-width: 800px)">    
+    <link rel="stylesheet" href="../css/style-a.css" type="text/css" media="screen and (min-width: 1200px)">
+    <link rel="stylesheet" href="../css/style-b.css" type="text/css" media="screen and (min-width: 992px) and (max-width: 1200px)">
+    <link rel="stylesheet" href="../css/style-c.css" type="text/css" media="screen and (min-width: 800px) and (max-width: 992px)">
+    <link rel="stylesheet" href="../css/style-d.css" type="text/css" media="screen and (max-width: 800px)">   
     <title>Document</title>
 </head>
 <body>
@@ -15,24 +16,23 @@
      <nav class="navbar">
          <div class="width-limit">
             <!-- 左上角 -->
-            <a class="logo" href="index.html">
-               <img src="./nav-logo.png" alt="nav-bar">
+            <a class="logo" href="../images/index.html">
+               <img src="../images/nav-logo.png" alt="nav-bar">
             </a>
             <!-- 右上角 -->
             <!-- 未登录显示登录/注册/写文章  -->
             <a class="btn btn-write" href="writepassage.html">
-                <i class="iconfont">&#xe615;</i>写文章
-                <!-- <img src="./icon-checkin.png" alt="check">写文章 -->
+                <img src="../images/icon-checkin.png" alt="check">写文章
             </a>
             <a class="btn sign-up" href="regeister.html">注册</a>
             <a class="btn log-in" href="login.html">登录</a>
             <div class="nav-beta">
                 <div class="nav-beta-limit">
-                    <img src="./beta.png" class="nav-beta-limit-image" alt="beta">
+                    <img src="../images/beta.png" class="nav-beta-limit-image" alt="beta">
                 </div>                 
             </div>
             <div class="style-mode-btn">
-                <img src="./Aa.png" class="style-mode-btn-image" alt="Aa">
+                <img src="../images/Aa.png" class="style-mode-btn-image" alt="Aa">
             </div>
             <!-- 中间 -->
             <div class="container">
@@ -46,15 +46,15 @@
                 <div class="container-collapse" >
                     <div class="container-collapse-nav" id="nav-collapse">
                         <div class="container-collapse-nav-tab tab">
-                            <a href="index.html">                               
+                            <a href="index.html" class="container-collapse-nav-tab-a">                               
                                 <span class="menu-text">首页</span>
-                                <img src="./zhinanzhen.png" class="menu-icon" alt="zhinanzhen">
+                                <img src="../images/zhinanzhen.png" class="menu-icon" alt="zhinanzhen">
                             </a>
                         </div>
                         <div class="container-collapse-nav-tab download">
-                            <a href="download.html">                               
+                            <a href="download.html" class="container-collapse-nav-tab-a">                               
                                 <span class="menu-text-download ">下载App</span>
-                                <img src="xiazai.png" class="menu-icon" alt="download">
+                                <img src="../images/xiazai.png" class="menu-icon" alt="download">
                             </a>
                         </div>
                         <div class="container-collapse-nav-search">
@@ -62,35 +62,28 @@
                                 <input type="search" name="search" placeholder="搜索" class="search-1" id="search-input">
                                 <div class="container-collapse-nav-search-limit-img" id="search-img">
                                     <a class="search-btn" href="result.html">
-                                        <img src="search1.png" class="search-img" alt="search" id="search-img-a">
+                                        <img src="../images/search1.png" class="search-img" alt="search" id="search-img-a">
                                     </a>
                                 </div>                               
                                 <div id="navbar-search-tips" >
                                     <div class="trangle"></div>
                                     <div class="search-recent" id="search-recent-id">
-                                        <ul class="search-recent-item-wrap" id="search-recent-id-ul"> 
-                                            <!-- <li>
-                                                <a href="" target="_blank">
-                                                    <i class="iconfont ic-search-history"></i>
-                                                    <span></span>
-                                                    <i class="iconfont ic-unfollow"></i>
-                                                </a>
-                                            </li> -->
-                                        </ul>
+                                        <div class="search-recent-item-wrap" id="search-recent-id-ul">                                             
+                                        </div>
                                     </div>
-                                </div>
-                                
+                                </div>                                
                             </div>
                         </div>
                      </div>
                 </div>                     
-            </div>
-            
+            </div>            
         </div>
      </nav>
      <!-- 中间部分 -->
      <div class="container body">1</div>
-<script src="javascript.js"></script>
+<script src="../js/screen-width.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/search-history.js"></script>
 </html>
 </body>
 </html>
