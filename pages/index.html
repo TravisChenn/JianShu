@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../css/style-a.css" type="text/css" media="screen and (min-width: 1200px)">
     <link rel="stylesheet" href="../css/style-b.css" type="text/css" media="screen and (min-width: 992px) and (max-width: 1200px)">
     <link rel="stylesheet" href="../css/style-c.css" type="text/css" media="screen and (min-width: 800px) and (max-width: 992px)">
-    <link rel="stylesheet" href="../css/style-d.css" type="text/css" media="screen and (max-width: 800px)">   
+    <link rel="stylesheet" href="../css/style-d.css" type="text/css" media="screen and (max-width: 800px)">
+    <link rel="stylesheet" href="../css/beta.css" type="text/css">   
     <title>Document</title>
 </head>
 <body>
@@ -26,9 +27,20 @@
             </a>
             <a class="btn sign-up" href="regeister.html">注册</a>
             <a class="btn log-in" href="login.html">登录</a>
-            <div class="nav-beta">
-                <div class="nav-beta-limit">
+            <div class="nav-beta" id="nav-beta">
+                <div class="nav-beta-limit" id="nav-beta-limit">
                     <img src="../images/beta.png" class="nav-beta-limit-image" alt="beta">
+                </div>
+                <div class="nav-beta-click" id="nav-beta-click">
+                    <div class="nav-beta-back" ></div>
+                    <div class="nav-beta-window" >
+                        <h4>简书钻相关功能，目前仅能在 &#10;<span>简书APP</span>查看</h4>
+                        <div>
+                            <img src="../images/jianshu-code.png" alt="jianshu-code">
+                        </div>
+                        <p>扫码下载 简书App</p>
+                        <div class="nav-beta-window-known" id="nav-beta-window">我知道了</div>
+                    </div>
                 </div>                 
             </div>
             <div class="style-mode-btn">
@@ -68,7 +80,15 @@
                                 <div id="navbar-search-tips" >
                                     <div class="trangle"></div>
                                     <div class="search-recent" id="search-recent-id">
-                                        <div class="search-recent-item-wrap" id="search-recent-id-ul">                                             
+                                        <div class="search-recent-item-wrap" id="search-recent-id-ul">
+                                            <!-- <div>
+                                                <div class="search_history_list_item" id="list-item">
+                                                    <img src="../images/clock.png" class="search_history_list_item-left">
+                                                    <span class="search_history_list_item-middle"></span>
+                                                </div>
+                                                
+                                                <img src="../images/false.png" class="search_history_list_item-right"               id="item-right" onmouseover="MouseOver()" onmouseout="MouseOut()" >
+                                            </div>  -->
                                         </div>
                                     </div>
                                 </div>                                
@@ -84,6 +104,7 @@
 <script src="../js/screen-width.js"></script>
 <script src="../js/search.js"></script>
 <script src="../js/search-history.js"></script>
+<script src="../js/beta.js"></script>
 </html>
 </body>
 </html>

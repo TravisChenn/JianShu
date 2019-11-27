@@ -256,6 +256,7 @@
         height: 25px;
         padding: 15px 0px;
         margin: 0 12px;
+
     }
     .nav-beta-limit{
         width: 100%;
@@ -263,6 +264,7 @@
     }
     .nav-beta-limit-image{
         height: 25px;
+        cursor: pointer;
     }
     .style-mode-btn{
         float: right;
