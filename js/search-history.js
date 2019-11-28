@@ -24,40 +24,31 @@ search_input.addEventListener('keypress',function(event){
     }
 })
 
-function reload () {
-    var history_local = window.localStorage.getItem('search_history')
-    if (history_local !== null) {
-        search_history = history_local.split(",")
-    }
-
-    var li ="";
-    for (var i = 0; i < search_history.length; i++) {
-        var liOne = `
-                    <div class="search_history_list_item" style="display:block;height:20px;line-height:20px;padding:10px;font-size:14px;color:#333;position:relative" id="list-item" >
-                        <img src="../images/clock.png" class="search_history_list_item-left">
-                        <span class="search_history_list_item-middle">`    
-        var liTwo = `</span>
-                    </div>
-                    <img src="../images/false.png" class="search_history_list_item-right" id="item-right" onmouseover="MouseOver()" onmouseout="MouseOut()" onclick="remove('` + search_history[i] + `')">
-                    `
- 
-    li = "<div>" +liOne + search_history[i] + liTwo + "</div>"+ li  
-    }
-    search_history_list_wrap.innerHTML = li
-}
-
-function remove (value) {
-    var history_local = window.localStorage.getItem('search_history')
-    if (history_local !== null) {
-        search_history = history_local.split(",")
-    }
-    for(a = 0;a < search_history.length;a++){
-        if(search_history[a] == value){
-            search_history[a] ===null;
+function reload (value) {
+    if (value) {
+        window.localStorage.setItem('search_history', value)
+    } else {
+        var history_local = window.localStorage.getItem('search_history')
+        if (history_local) {
+            search_history = history_local.split(",")
         }
     }
-    reload();
-    console.log('remove', value)
+    var li ="";
+    for (var i = 0; i < search_history.length; i++) {
+        var left = `
+            <div id="list-item" class="search_history_list_item search-history-item-left">
+                <img src="../images/clock.png" class="search_history_list_item-left">
+                <span class="search_history_list_item-middle">` + search_history[i] + `</span>
+            </div>
+        `
+        var right = `
+            <div class="search-history-item-right">
+                <img src="../images/false.png" onmouseout="mouse_in(${i})" onmousein="mouse_in(${i})" onclick="mouse_click(${i})" class="search_history_list_item-right">
+            </div>
+         `
+        li = `<div class="search-history-item">` + left + right + `</div>` + li  
+    }
+    search_history_list_wrap.innerHTML = li
 }
 
 function create () {
@@ -68,18 +59,16 @@ function create () {
     }
     reload()
 }
-//搜索框历史记录叉号动画
-// function onMouseOver(){
-//     document.getElementById("item-right").style.visibility="visible"
-// }
-// function onMouseOut(){
-//     document.getElementById("item-right").style.visibility="hidden"
-// } 
 
-function MouseOver(){
-document.getElementById("item-right").src="../images/false-hover.png"  
+function mouse_in (value) {
+    document.getElementById('search-history-item-right-' + value).src = "../images/false.png" 
 }
-function MouseOut(){
-document.getElementById("item-right").src="../images/false.png"  
-} 
 
+function mouse_out (value) {
+    document.getElementById('search-history-item-right-' + value).src = "../images/false-hover.png"
+}
+
+function mouse_click (value) {
+    search_history.splice(value, 1)
+    reload(search_history)
+}

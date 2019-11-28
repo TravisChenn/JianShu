@@ -1,0 +1,25 @@
+.search-history-item {
+    overflow: hidden;
+}
+.search-history-item-left {
+    height:20px;
+    line-height:20px;
+    padding:10px;
+    font-size:14px;
+    color:#333;
+    position:relative;
+    float: left;
+}
+.search-history-item-right{
+    display: flex;
+    height: 40px;
+    width:40px;
+    align-items: center;
+    justify-content: center;
+    float: right;
+}
+
+.search-history-item-right img{
+    width: 10px;
+    height: 10px;
+}

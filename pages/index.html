@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="../css/style-c.css" type="text/css" media="screen and (min-width: 800px) and (max-width: 992px)">
     <link rel="stylesheet" href="../css/style-d.css" type="text/css" media="screen and (max-width: 800px)">
     <link rel="stylesheet" href="../css/beta.css" type="text/css">   
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/search-history.css" type="text/css">   
+    <link rel="stylesheet" href="../css/reading-model.css" type="text/css">  
+    <title>首页</title>
 </head>
 <body>
      <!-- 全局顶部导航栏 -->
@@ -22,30 +24,46 @@
             </a>
             <!-- 右上角 -->
             <!-- 未登录显示登录/注册/写文章  -->
+            <!-- 写文章 -->
             <a class="btn btn-write" href="writepassage.html">
                 <img src="../images/icon-checkin.png" alt="check">写文章
             </a>
+            <!-- 注册 -->
             <a class="btn sign-up" href="regeister.html">注册</a>
+            <!-- 登录 -->
             <a class="btn log-in" href="login.html">登录</a>
+            <!-- 下载简书APP -->
             <div class="nav-beta" id="nav-beta">
                 <div class="nav-beta-limit" id="nav-beta-limit">
                     <img src="../images/beta.png" class="nav-beta-limit-image" alt="beta">
-                </div>
-                <div class="nav-beta-click" id="nav-beta-click">
-                    <div class="nav-beta-back" ></div>
-                    <div class="nav-beta-window" >
-                        <h4>简书钻相关功能，目前仅能在 &#10;<span>简书APP</span>查看</h4>
-                        <div>
-                            <img src="../images/jianshu-code.png" alt="jianshu-code">
-                        </div>
-                        <p>扫码下载 简书App</p>
-                        <div class="nav-beta-window-known" id="nav-beta-window">我知道了</div>
-                    </div>
                 </div>                 
             </div>
-            <div class="style-mode-btn">
-                <img src="../images/Aa.png" class="style-mode-btn-image" alt="Aa">
-            </div>
+            <!-- 阅读模式 -->
+            <div class="style-mode">
+                <div class="style-mode-btn" id="style-mode-btn">
+                    <img src="../images/Aa.png" class="style-mode-btn-image" alt="Aa">
+                </div>
+                <div class="style-mode-container" id="style-mode-container">
+                     <div class="nav-trangle"></div>
+                    <div class="style-meta">
+                        <img src="../images/moon.png" alt="moon" >
+                        <span>夜间模式</span>
+                    </div>
+                    <div class="switch day-night-group">
+                        <div class="switch-btn" style="width: 15%;">开</div>
+                        <div class="switch-btn active" style="width: 15%;">关</div>
+                    </div>
+                    <hr>
+                    <div class="switch font-family-group">
+                        <div class="switch-btn font-song">宋体</div>
+                        <div class="switch-btn font-hei active">黑体</div>
+                    </div>
+                    <div class="switch">
+                        <div class="switch-btn active">简</div>
+                        <div class="switch-btn">繁</div>
+                    </div>
+                </div>
+            </div> 
             <!-- 中间 -->
             <div class="container">
                 <div class="navbar-header">
@@ -101,10 +119,22 @@
      </nav>
      <!-- 中间部分 -->
      <div class="container body">1</div>
+     <div class="nav-beta-click" id="nav-beta-click">
+            <div class="nav-beta-back" id="nav-beta-back"></div>
+            <div class="nav-beta-window" id="nav-beta-window-div" >
+                <h4>简书钻相关功能，目前仅能在 &#10;<span>简书APP</span>查看</h4>
+                <div>
+                    <img src="../images/jianshu-code.png" alt="jianshu-code">
+                </div>
+                <p>扫码下载 简书App</p>
+                <div class="nav-beta-window-known" id="nav-beta-window">我知道了</div>
+            </div>
+        </div>
 <script src="../js/screen-width.js"></script>
 <script src="../js/search.js"></script>
 <script src="../js/search-history.js"></script>
 <script src="../js/beta.js"></script>
+<script src="../js/reading-model.js"></script>
 </html>
 </body>
 </html>

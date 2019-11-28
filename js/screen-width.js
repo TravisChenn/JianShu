@@ -1,5 +1,5 @@
 // 屏幕宽度小于800px，菜单隐藏动画
-var open = false
+var open = false;
 var btn = document.getElementById("btn-click");
 var nav = document.getElementById("nav-collapse");
 btn.addEventListener('click', function(){

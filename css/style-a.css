@@ -175,7 +175,6 @@
     .search_history_list_item:hover {
         background-color: #eee;
     }
-
     .search_history_list_item-left {
         float: left;
         margin:0 10px 0 0;
@@ -189,15 +188,6 @@
         white-space: nowrap;
         display: block;
         padding-right: 30px;
-    }
-    .search_history_list_item-right {
-        height:10px;
-        width:10px;
-        position: absolute;
-        right: 15px;
-        top: 20px;
-        color: #a0a0a0;
-        visibility: hidden;
     }
     .search-recent-item-wrap div:hover .search_history_list_item-right{
         visibility: visible;
@@ -252,30 +242,6 @@
         height: 30px;
         font-size: 15px;
         color: #969696;
-    }
-    .nav-beta{
-        float: right;
-        height: 25px;
-        padding: 15px 0px;
-        margin: 0 12px;
-    }
-    .nav-beta-limit{
-        width: 100%;
-        height: 100%;
-    }
-    .nav-beta-limit-image{
-        height: 25px;
-        cursor: pointer;
-    }
-    .style-mode-btn{
-        float: right;
-        line-height: 20px;
-        padding: 17px 10px;
-        font-size: 24px;
-        color: #969696;
-    }
-    .style-mode-btn-image{
-        height: 24px;
     }
     .btn-write img{
         height: 20px;
