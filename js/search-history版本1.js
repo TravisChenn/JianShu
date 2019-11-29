@@ -4,16 +4,16 @@ var search_commit = document.getElementById('search-img')
 var search_history_wrap = document.getElementById("navbar-search-tips")
 var search_history_list_wrap = document.getElementById("search-recent-id-ul")
 
-reload('async')
+reload()
 
 //点击搜索创建节点
 search_commit.onclick = function () {
-    reload('create')
+    create()
 }
 //回车创建节点
 search_input.addEventListener('keypress',function(event){
     if(event.keyCode == 13){
-        reload('create')
+        create()
     }
 })
 search_input.addEventListener('focus',function(event){
@@ -23,62 +23,21 @@ search_input.addEventListener('blur',function(event){
     search_history_wrap.style.visibility= "hidden";
 })
 
-/**
- * 获取 localstorage 中的值
- */
-function get_localstorage () {
-    var get_localstorage_value = window.localStorage.getItem('search_history')
-    if (get_localstorage_value) {
-        return get_localstorage_value.split(",")
+function reload (value) {
+    if (value) {
+        window.localStorage.setItem('search_history', value)
+        create_li();
     } else {
-        return []
-    }
-}
-
-/**
- * 设置 localstorage 数据
- * ---
- * @param {Boolean} positive true:  内存 -> 本地
- *                           false: 本地 -> 内存
- * ---
- */
-function async_localstorage (positive) {
-    if (positive) {
-        window.localStorage.setItem('search_history', search_history)
-    } else {
-        search_history = get_localstorage()
-    }
-}
-
-/**
- * 重置
- * ---
- * @param {String} type   类型
- * @param {Number} index  索引
- * ---
- */
-function reload (type, index) {
-    if (type === 'async') {
-        async_localstorage(false)
-    }
-    if (type === 'remove') {
-        search_history.splice(index, 1)
-        async_localstorage(true)
-    }
-    if (type === 'create') {
-        var create_current_storage = get_localstorage()
-        var search_input_value = search_input.value.trim()
-        if (create_current_storage.length === 5) {
-            create_current_storage.shift()
+        var history_local = window.localStorage.getItem('search_history')
+        if (history_local) {
+            search_history = history_local.split(",")
         }
-        create_current_storage.push(search_input_value)
-        search_history = create_current_storage
-        async_localstorage(true)
+            create_li();
+        
     }
-    create_li();
+    
+    
 }
-
-
 function create_li () {
     var li ="";
     for (var i = 0; i < search_history.length; i++) {
@@ -94,7 +53,7 @@ function create_li () {
                     src="../images/false.png"
                     onmousein="mouse_in(${i})"
                     onmouseout="mouse_in(${i})"
-                    onclick="reload('remove', ${i})"
+                    onclick="mouse_click(${i})"
                     class="search_history_list_item-right"
                 />
             </div>
@@ -102,6 +61,20 @@ function create_li () {
         li = `<div class="search-history-item">` + left + right + `</div>` + li  
     }
     search_history_list_wrap.innerHTML = li
+    var childs = search_history_list_wrap.childNodes;
+    if(i > 5) {
+        for(var c =0 ; c<i-5;i--)
+        search_history_list_wrap.removeChild(childs[i-1]);
+    }
+}
+
+function create () {
+    var search_input_value = search_input.value.trim()
+    if (search_input_value.length !== 0) {
+        search_history.push(search_input_value)
+        localStorage.setItem('search_history', search_history.join(','))
+    }
+    reload()
 }
 
 function mouse_in (value) {
@@ -111,3 +84,16 @@ function mouse_in (value) {
 function mouse_out (value) {
     document.getElementById('search-history-item-right-' + value).src = "../images/false.png"
 }
+
+function mouse_click (value) {
+    search_history.splice(value, 1)
+    reload(search_history)
+}
+
+// function recreate() {
+//     var a, b ;
+//      a = search_history.length;
+//      search_history.splice(a-6, 1);
+//      b = search_history.length;
+//     create_li();
+// }
