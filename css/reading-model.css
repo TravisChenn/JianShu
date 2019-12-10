@@ -1,5 +1,9 @@
 .style-mode{
     float: right;
+    position: relative;
+    top:0;
+    right: 0;
+
 }
 .style-mode-btn{
     float: right;
@@ -14,13 +18,13 @@
 }
 .style-mode-container{
     visibility: hidden;
+    width: 200px;
     opacity: 0;
-    left: 969px;
     position: absolute;
     top: 42px;
+    right: -22px;
     z-index: 1;
     padding: 20px 20px 20px 24px;
-    margin-left: -80px;
     min-width: 191px;
     background-color: #fff;
     border-radius: 4px;

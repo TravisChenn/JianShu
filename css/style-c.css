@@ -153,57 +153,53 @@
         left:8%;
     }
     
-    #navbar-search-tips .search-recent {
-    padding: 5px;
-    width: 240px;
-    /* visibility: hidden; */
+    .search-recent {
+        padding: 5px;
+        width: 240px;
+        /* visibility: hidden; */
 
     }
-    #navbar-search-tips .search-recent ul {
+    .search-recent-item-wrap {
         list-style-type: none;
         margin: 0;
         padding-left: 0;
     }
-    #navbar-search-tips .search-recent ul li {
+    .search-recent-item-wrap div{
+        margin-right: 0;
+    }
+    
+    .search_history_list_item {
         margin-right: 0;
         border-radius: 4px;
+        text-decoration:none;
+        display: block;
+        height: 20px;
+        line-height: 20pxt;
+        padding: 10px 15px;
+        font-size: 14px;
+        color: #333;
+        position: relative;
     }
-    #navbar-search-tips .search-recent ul li:hover {
+    .search_history_list_item:hover {
         background-color: #eee;
     }
-    #navbar-search-tips .search-recent ul li:hover >img{
-        background-color: red;
-    }
-    /* .search-recent .search-recent-item-wrap li a {
-        display: block;
-        height: 40px;
-        line-height: 20px;
-        padding: 10px 15px;
-        font-size: 14px;
-        color: #333;
-        position: relative;
-    }
-    .search-recent .search-recent-item-wrap li a .ic-search-history {
+    .search_history_list_item-left {
         float: left;
-        margin-right: 10px;
-        font-size: 18px;
-        color: #787878;
+        margin:0 10px 0 0;
+        height:19px;
+        width:19px;
     }
-    .search-recent .search-recent-item-wrap li a span {
-        
+    .search_history_list_item-middle {
+        text-decoration:none; 
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         display: block;
         padding-right: 30px;
     }
-    .search-recent .search-recent-item-wrap li a .ic-unfollow {
-        position: absolute;
-        right: 15px;
-        top: 10px;
-        color: #a0a0a0;
-        
-    } */
+    .search-recent-item-wrap div:hover .search_history_list_item-right{
+        visibility: visible;
+    } 
         .menu-text-download{
         color: #333333;
     }

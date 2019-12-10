@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="../css/beta.css" type="text/css">   
     <link rel="stylesheet" href="../css/search-history.css" type="text/css">   
     <link rel="stylesheet" href="../css/reading-model.css" type="text/css">  
+    <link rel="stylesheet" href="../css/body-left-banner.css" type="text/css"> 
+    <link rel="stylesheet" href="../css/body-right.css" type="text/css"> 
     <title>首页</title>
 </head>
 <body>
@@ -131,13 +133,44 @@
      </nav>
      
      <!-- 中间部分 -->
-     <div class="container body">1</div>
+     <div class="body">
+         <div class="row">
+            <!-- 左边栏（占2/3） -->
+            <div class="row-left">
+                <!-- banner -->
+                <div class="row-left-banner">
+                    <!-- 手动切换 -->
+                    <div class="row-left-banner-arrow-left" id="arrow-left"></div>
+                    <div class="row-left-banner-arrow-right" id="arrow-right"></div>
+                    <!-- swiper(插件) -->
+                    <div class="row-left-banner-swiper">
+                        <div class="row-left-banner-swiper-wrapper" id="banner-wrapper">
+                            <div class="swiper-slide">
+                                <img src="../images/photo-banner.png" alt="photo">
+                            </div>
+                            <div class="swiper-slide">
+                                    <img src="../images/xiaoxue.jpg" alt="photo">
+                                </div>
+                            <div class="swiper-slide">
+                                <img src="../images/lidong.jpg" alt="photo">
+                            </div>
+                            <div class="swiper-slide">
+                                    <img src="../images/tree.jpg" alt="photo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 右边栏（占1/3） -->
+            <div class="row-right"></div>
+         </div>       
+     </div>
      
 <script src="../js/screen-width.js"></script>
 <script src="../js/search.js"></script>
 <script src="../js/search-history.js"></script>
 <script src="../js/beta.js"></script>
 <script src="../js/reading-model.js"></script>
-</html>
+<script src="../js/body-left-banner.js"></script>
 </body>
 </html>
