@@ -138,28 +138,7 @@
             <!-- 左边栏（占2/3） -->
             <div class="row-left">
                 <!-- banner -->
-                <div class="row-left-banner">
-                    <!-- 手动切换 -->
-                    <div class="row-left-banner-arrow-left" id="arrow-left"></div>
-                    <div class="row-left-banner-arrow-right" id="arrow-right"></div>
-                    <!-- swiper(插件) -->
-                    <div class="row-left-banner-swiper">
-                        <div class="row-left-banner-swiper-wrapper" id="banner-wrapper">
-                            <div class="swiper-slide">
-                                <img src="../images/photo-banner.png" alt="photo">
-                            </div>
-                            <div class="swiper-slide">
-                                    <img src="../images/xiaoxue.jpg" alt="photo">
-                                </div>
-                            <div class="swiper-slide">
-                                <img src="../images/lidong.jpg" alt="photo">
-                            </div>
-                            <div class="swiper-slide">
-                                    <img src="../images/tree.jpg" alt="photo">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="row-left-banner" id="row-left-banner"></div>
             </div>
             <!-- 右边栏（占1/3） -->
             <div class="row-right"></div>
@@ -172,5 +151,27 @@
 <script src="../js/beta.js"></script>
 <script src="../js/reading-model.js"></script>
 <script src="../js/body-left-banner.js"></script>
+<script>
+/**
+ * banner配置项
+ * 整体配置（创建配置对象）
+ * mount：插入节点位置
+ * width：节点宽度
+ * height：节点高度
+ * images：插入图片
+ */
+
+var banner = new banner({
+    mount: 'row-left-banner',
+    width: 625,
+    height: 270,
+    images: [
+    '../images/photo-banner.png',   
+    '../images/lidong.jpg',
+    '../images/tree.jpg',
+    '../images/xiaoxue.jpg'
+    ]
+})
+</script>
 </body>
 </html>

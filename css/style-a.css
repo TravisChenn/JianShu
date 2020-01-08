@@ -13,6 +13,8 @@
         border-bottom: 1px solid #f0f0f0;
         margin-bottom: 20px;
         font-family: Microsoft YaHei;
+        position: fixed;
+        z-index: 1000;
     }
     .width-limit{
         max-width: 1440px;
@@ -249,8 +251,4 @@
         font-size: 19px;
         vertical-align: middle;
     }
-    .body{
-        height: 900px;
-        background-color: bisque;
-        font-family: Microsoft YaHei;
-    }
+    
