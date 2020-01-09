@@ -9,7 +9,6 @@ var banner_conf = null
 function banner (conf) {
   banner_left = -1
   banner_conf = conf
-  console.log(banner_conf)
   mount_img()
 }
 
@@ -21,7 +20,6 @@ function banner (conf) {
 function mount_img () {
   let banner_img = ''
   let { mount, images, width, height } = banner_conf
-  console.log(mount)
   for (let index = 0; index < images.length + 2; index++) {
     let index_after = index - 1
     if (index === 0) {
@@ -83,5 +81,6 @@ function move (after, animation) {
   } else {
     document.getElementById('banner-img-wrap').className = "banner-img-wrap "
   }
+  console.log(banner_conf.width)
   document.getElementById('banner-img-wrap').style.setProperty('left', `${banner_left * banner_conf.width}px`)
 }

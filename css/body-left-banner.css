@@ -12,21 +12,19 @@
     position: relative;
     top: 56px;
     font-family: Microsoft YaHei;
-    height: 900px;
 }
 .row {
     margin: 0px -15px;
 }
 .row-left {
     padding: 30px 0 0 15px;
-    width: 66.66667%;
+    width: 66.66666%;
     /* display: inline-block; */
     box-sizing: border-box;
-    height: 900px;
     float: left;
 }
 .row-left-banner {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     border-radius: 10px;
 }
 
